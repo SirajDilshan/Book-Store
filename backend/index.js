@@ -6,14 +6,14 @@ import bookRoute from "./routes/bookRoute.js";
 
 const app = express();
 
-app.use(cors());
+// app.use(cors());
 
-// app.use(cors({
-//   origin: "http://localhost:3000", // only allow this frontend
-//   methods: ["GET", "POST", "PUT", "DELETE"], // allowed methods
-//   credentials: true, // if you're sending cookies or auth headers
-//   allowedHeaders:['Content-Type'],
-// }));
+app.use(cors({
+  origin: "http://localhost:3000", // only allow this frontend
+  methods: ["GET", "POST", "PUT", "DELETE"], // allowed methods
+  credentials: true, // if you're sending cookies or auth headers
+  allowedHeaders:['Content-Type'],
+}));
 
 app.use(express.json());
 
